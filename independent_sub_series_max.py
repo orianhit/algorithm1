@@ -32,7 +32,6 @@ def get_max_ind_sum(arr, debug=False):
                 maybe_result[append_to_chain] = idx
             else:
                 max_sum_per_idx[idx + 1] = max_sum_per_idx[idx]
-                # this line can be cost O(n) but can be implemented as 2way_linked_list
                 maybe_result[append_to_chain] = maybe_result['B' if append_to_chain == 'A' else 'A']
         if debug:
             print("=====================================")
